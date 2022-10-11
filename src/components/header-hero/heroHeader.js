@@ -10,6 +10,7 @@ element.innerHTML = `
     <img class="header__img" src="${hero.image}" alt="">
 `
 
+element.append(headerTextBox(hero))
 return element
 }
 export default heroHeader

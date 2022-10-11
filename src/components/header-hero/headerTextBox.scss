@@ -1,0 +1,12 @@
+@import "variables";
+
+.headertextbox {
+    background-color: $white-color;
+    width: 46.313rem;
+    height: 33.563rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.368);
+
+    &__heading {
+        width: 60%;
+    }
+}

@@ -1,12 +1,11 @@
+import "./headerTextBox.scss"
 
-
-let headerTextBox = function() {
+let headerTextBox = function(hero) {
 let element = document.createElement('div')
-element.classList.add('headerTextBox')
+element.classList.add('headertextbox')
 element.innerHTML = `
-    <h1>${hero.headline}</h1>
+    <h1 class="header__heading">${hero.headline}</h1>
 `
-element.append(headerTextBox())
 
 return element
 }
