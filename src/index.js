@@ -1,8 +1,15 @@
-document.addEventListener("DOMContentLoaded", function() {
+    import heroHeader from "./components/header-hero/heroHeader.js"
+    import section from "./components/advantages/section.js"
+    import servSection from "./components/servicesSection/servSection.js"
+    import facility from "./components/facilities/facility.js"
 
-    // slå dig løs her... 
+    let element = document.querySelector(".wrapper")
 
-    //eksempel på at udskrive alle overskrifter i services i konsollen:
-    services.forEach(service => console.log(service.headline))
+    const main = document.createElement("main")
+    main.classList.add("main")
 
-}) // DOMContentLoaded slut
+    element.append(heroHeader())
+    element.append(main)
+    main.append(servSection())
+    main.append(facility())
+    main.append(section())
