@@ -1,4 +1,5 @@
 const path = require("path")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
     entry: "./src/index.js",
@@ -14,6 +15,11 @@ module.exports = {
         },
         port: 3000,
     },
+    plugins: [
+        new MiniCssExtractPlugin({
+            linkType: "text/css"
+        })
+    ],
     module: {
         rules: [
             {

@@ -1,0 +1,28 @@
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    &__h2 {
+        font-family: 'Merriweather', serif;
+        padding-left: 1.5rem;
+    }
+
+    &__font {
+        font-family: 'Merriweather', serif;
+    } 
+
+    &__font, &__img {
+        padding-left: 1.5rem;
+    }
+
+    &__text {
+        width: 80%;
+        padding-bottom: 0.5rem;
+    }
+    
+    &__img {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+}

@@ -1,6 +1,3 @@
-
-
-
 let advArticle = function(advantage) {
 let element = document.createElement('article')
 element.classList.add('adv__article')

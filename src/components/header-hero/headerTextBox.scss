@@ -1,12 +1,46 @@
 @import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
 
 .headertextbox {
     background-color: $white-color;
     width: 46.313rem;
     height: 33.563rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.368);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.195);
+    position: relative;
+    bottom: 17rem;
+    left: 12rem;
 
     &__heading {
-        width: 60%;
+        width: 70%;
+        justify-content: center;
+        font-size: 2.438rem;
+        padding-top: 3rem;
+    }
+    
+    &__text {
+        width: 44%;
+        font-size: 1rem;
+        color: $grey-color;
+    }
+    
+    &__heading, &__text {
+        font-family: 'Merriweather', serif;
+        padding-left: 3rem;
+    }
+
+    &__btn {
+        background-color: $orange-color;
+        border: none;
+        color: $white-color;
+        width: 15.625rem;
+        height: 4.063rem;
+        margin-left: 3rem;
+        padding-bottom: 1rem;
+        padding-right: 1.4rem;
+    }
+
+    &__icon {
+        margin-right: 1rem;
     }
 }
