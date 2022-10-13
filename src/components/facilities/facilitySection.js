@@ -1,15 +1,19 @@
-import {facilities} from "../../data.js"
+// import {facilities} from "../../data.js"
 import facilityArticle from "./facilityArticle.js"
-console.log(facilities)
+// console.log(facilities)
 
-let facilityArticle = function() {
+let facilitySection = function() {
 let element = document.createElement('div')
 element.classList.add('facilities')
 
-facilities.forEach(facility => {
-
-    element.append(facilityArticle(facility))
+fetch("http://localhost:4000/facilities")
+.then(response => response.json())
+.then(facilities => {
+    console.log(facilities)
+    facilities.options.forEach(facility => {
+        element.append(facilityArticle(facility))
+    })
 })
 return element
 }
-export default facilityArticle
+export default facilitySection
