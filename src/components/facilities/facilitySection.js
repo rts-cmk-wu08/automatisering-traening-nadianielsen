@@ -9,7 +9,6 @@ element.classList.add('facilities')
 fetch("http://localhost:4000/facilities")
 .then(response => response.json())
 .then(facilities => {
-    console.log(facilities)
     facilities.options.forEach(facility => {
         element.append(facilityArticle(facility))
     })

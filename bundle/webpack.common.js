@@ -1,17 +1,33 @@
 const path = require("path")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const CleanWebpackPlugin = require("clean-webpack-plugin")
+
+const listOfComponents = ['index', 'update']
+
+const htmlGenerators = listOfComponents.reduce((entries, componentName) => {
+    entries.push(new HtmlWebpackPlugin({
+        template: 'template.html',
+        inject: true,
+        chunks: [componentName], 
+        filename: `${componentName}.html`
+    }))
+
+    return entries
+})
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: {
+       index: "./src/index.js",
+       update: "./src/update.js/"
+    },
     output: {
-        filename: "main.js",
+        filename: "[name].bundle.js",
         path: path.resolve(__dirname, "../build")
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: "template.html"
-        }),
+        new CleanWebpackPlugin(),
+        ...htmlGenerators,
         new MiniCssExtractPlugin({
             linkType: "text/css"
         })
